@@ -1,0 +1,59 @@
+{
+  "name": "@local/dsh-dev-toolbox",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Timestamp converter, Gson-style JSON formatter/validator, AES encrypt/decrypt and random string generator for DeepSeek Harness.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zb5594921/dsh-dev-toolbox.git"
+  },
+  "homepage": "https://github.com/zb5594921/dsh-dev-toolbox#readme",
+  "bugs": {
+    "url": "https://github.com/zb5594921/dsh-dev-toolbox/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "plugin",
+    "toolbox",
+    "timestamp",
+    "json",
+    "gson",
+    "aes",
+    "random-string"
+  ],
+  "scripts": {
+    "test": "node test/helpers.test.cjs && node test/client.test.cjs"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "locale/en.json",
+    "locale/zh.json"
+  ],
+  "icon": "./icon.svg",
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

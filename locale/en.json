@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Developer Toolbox",
+    "description": "Timestamp conversion, Gson-style JSON formatting/validation, AES encryption/decryption and random string generation, all in one sidebar panel."
+  }
+}
